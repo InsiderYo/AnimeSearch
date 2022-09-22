@@ -1,0 +1,441 @@
+.navBar {
+  font-family: 'Cairo Play', cursive;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(179, 112, 112);
+  position: relative;
+  width: 310px;
+  height: 120px;
+  left: 65px;
+  top: 340px;
+  background: #ac2626;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(90, 89, 89, 0.25);
+}
+.containerSearch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  justify-content: stretch;
+}
+.kemicofa-row {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  justify-content: stretch;
+}
+
+.kemicofa-row > * {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+.kemicofa-row .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.kemicofa-row .card > .card-content {
+  flex-grow: 1;
+}
+
+.kemicofa-row .card > .card-image {
+  flex-basis: 20rem;
+  flex-shrink: 0;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.cardAnime {
+  padding-right: 15px;
+}
+
+.animeContent {
+  padding: 10px 10px 10px 10px;
+  width: 230px;
+  height: 230px;
+  /* min-height: 300px; */
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 15px 0px 15px 15px;
+  box-shadow: rgba(134, 133, 133, 0.1) 0px 10px 15px -3px,
+    rgba(218, 218, 218, 0.05) 0px 4px 6px -2px;
+  transition: all 0.2s;
+  overflow: hidden;
+  text-align: center;
+  background: radial-gradient(#f588d8, #c0a3e5);
+  background: #ac2626;
+  position: relative;
+  top: 60px;
+}
+#kemicofa-row::-webkit-scrollbar {
+  width: 10px;
+}
+
+#kemicofa-row::-webkit-scrollbar-track {
+  background-color: #d7d7df00;
+  border-radius: 10px;
+}
+
+#kemicofa-row::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ac2626;
+}
+
+/* .animeContent:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+} */
+
+.search-results {
+  width: 970px;
+  position: relative;
+  align-items: center;
+  left: 440px;
+}
+
+.pic {
+  height: 300px;
+  width: 100%;
+  border-radius: 15px;
+  z-index: 0;
+  top: 85px;
+  position: relative;
+  box-shadow: rgba(143, 143, 143, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.animeName {
+  text-align: center;
+  font-size: 16px;
+  color: aliceblue;
+  position: relative;
+  max-height: 45px;
+  overflow: hidden;
+}
+.ugol {
+  position: relative;
+  z-index: 3;
+  width: 50px;
+  left: 181px;
+  bottom: 242px;
+}
+
+.animeDisc {
+  max-height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 15px;
+  color: rgb(20, 20, 20);
+  font-size: 14px;
+}
+
+.first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: 19px;
+}
+
+.st1 {
+  position: relative;
+  height: 30px;
+  background-color: rgb(223, 67, 67);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.st1:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+.st3 {
+  position: relative;
+  height: 30px;
+  background-color: rgb(250, 182, 177);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.st3:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+.inputAnime {
+  width: 450px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.39);
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: rgba(224, 222, 222, 0.1) 0px 4px 6px -1px,
+    rgba(194, 193, 193, 0.06) 0px 2px 4px -1px;
+}
+.inputAnime:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px rgb(110, 110, 110) inset; /* можно изменить на любой вариант цвета */
+  -webkit-text-fill-color: rgb(12, 12, 12);
+}
+.inputAnime:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.formAnime {
+  background-color: rgb(19, 19, 19);
+}
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  /* position: fixed;
+  top: 170px; */
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  right: 30px;
+  color: rgba(0, 0, 0, 0.507);
+  font-size: 17px;
+}
+
+.secTitle {
+  position: relative;
+  top: 75px;
+  color: #ac2626;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+}
+
+.stick3 {
+  position: relative;
+  height: 30px;
+  background-color: rgb(250, 182, 177);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  bottom: 9px;
+  left: 70px;
+}
+.stick3:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+.stick1 {
+  position: relative;
+  height: 30px;
+  background-color: rgb(223, 67, 67);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  left: 10px;
+  bottom: 9px;
+}
+.stick1:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+.stick2 {
+  position: relative;
+  height: 32px;
+  width: 45px;
+  background-color: rgba(179, 116, 119, 0.986);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  bottom: 9px;
+  left: 150px;
+}
+.stick2:hover {
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+.getMore {
+  position: relative;
+  top: 67px;
+  left: 63px;
+  line-height: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.addFavor {
+  position: relative;
+  top: 37px;
+  left: 170px;
+  line-height: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.logout {
+  position: relative;
+  top: 60px;
+  left: 238px;
+  line-height: 15px;
+  color: antiquewhite;
+}
+.boxInfo {
+  position: absolute;
+}
+
+.info {
+  color: antiquewhite;
+  position: relative;
+  bottom: 15px;
+  left: 9px;
+  line-height: 15px;
+}
+.fa-user-ninja {
+  padding-right: 5px;
+  position: absolute;
+  top: 16px;
+  font-size: 33px;
+  left: 9px;
+  opacity: 90%;
+}
+.fa-gears {
+  position: absolute;
+  left: 282px;
+  top: 8px;
+  opacity: 80%;
+}
+.fa-gears:hover {
+  color: black;
+}
+
+.user {
+  font-size: 21px;
+  position: relative;
+  left: 45px;
+  top: 7px;
+  color: antiquewhite;
+}
+.profile {
+  width: 300px;
+  position: absolute;
+  left: 70px;
+  top: 20px;
+}
+
+hr {
+  height: 5px;
+  background: #ac2626;
+  border: inherit;
+  opacity: inherit;
+}
+
+.sword {
+  width: 400px;
+  position: absolute;
+  left: 1770px;
+  top: 420px;
+  animation-name: sword;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: 50;
+  transform: rotate(5deg);
+}
+
+@keyframes sword {
+  0% {
+    left: 1770px;
+  }
+  100% {
+    left: 1470px;
+  }
+}
+
+.suske {
+  width: 350px;
+  position: absolute;
+  left: 1410px;
+  top: 34px;
+  animation-name: suske;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes suske {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.enter {
+  color: rgb(240, 235, 235);
+  opacity: 80%;
+}
+
+#clearButton {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 680px;
+  top: 124px;
+  background: inherit;
+  border: inherit;
+}
+
+/* section {
+  position: relative;
+  top: 10px;
+} */
+
+.symbol {
+  width: 350px;
+  position: absolute;
+  left: 740px;
+  top: 165px;
+  animation-name: symbol;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes symbol {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.surik {
+  width: 22px;
+  position: absolute;
+  left: 204px;
+  top: 373px;
+  animation: surik 1s linear infinite;
+  z-index: 50;
+}
+@keyframes surik {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.status {
+  position: absolute;
+  top: 33px;
+  left:46px;
+  font-family: 'Cairo Play', cursive;
+  font-weight: 600;
+  color: antiquewhite;
+  font-size: 14px;
+}

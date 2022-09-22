@@ -8,6 +8,10 @@ const FileStore = require('session-file-store')(session);
 
 // const { sequelize } = require('../db/models');
 const renderTemplate = require('../lib/renderReactModule');
+const Search = require('../views/Search');
+const Main = require('../views/Main');
+
+const userRoute = require('../routes/user.route'); //регистер и авторизэйшн
 
 const app = express();
 
@@ -34,12 +38,23 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
+app.use((req, res, next) => {
+  app.locals.username = req.session?.username; // User.firstname
+  app.locals.userId = req.session?.userId; // userId уточнить при создании юзера!!!
+  next();
+});
+
+app.get('/search', (req, res) => {
+  const user = req.session?.username;
+  renderTemplate(Search, { user }, res);
+});
+
+// app.get('/', (req, res) => {
+//   const user = req.session?.username;
+//   renderTemplate(Main, { user }, res);
+// });
+app.use('/', userRoute);
+
 app.listen(PORT, async () => {
-  try {
-    await sequelize.authenticate();
-    console.log('Соединение с базой установлено!');
-  } catch (err) {
-    console.log(err, 'Error!');
-  }
   console.log(`Сервер поднят на ${PORT} порту!`);
 });

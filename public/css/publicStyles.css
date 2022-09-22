@@ -1,0 +1,13 @@
+body {
+  background: rgb(19, 19, 19);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footercontent {
+  padding: 0 10px 0 10px;
+  background: rgb(27, 27, 27);
+}
+
